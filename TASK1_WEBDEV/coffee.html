@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COLD BREW COFFEE</title>
+    <link rel="stylesheet" href="coffee.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <div class="headertext">
+
+          <h1>
+            COLD BREW COFFEE
+            </h1>
+        </div>
+      </div>
+      <div class="description">
+        <div class="style-description">
+        <p>
+          <h2>
+            THE BEST COFFEE SHOP
+          </h2>
+        </p>
+        <p>
+          "Cold Brew Coffee" is your virtual gateway to a world of exquisite coffee experiences. Explore our curated selection of premium beans sourced from around the globe, each telling a unique flavor story. From the comfort of your home, embark on a journey of taste and aroma, as you choose and order your favorite beans, brewing equipment, and accessories. Elevate your coffee moments with the convenience of online shopping, where every click brings you closer to the perfect cup.
+        </p>
+        <button>
+          ABOUT US
+        </button>
+        </div>
+      </div>
+      <div class="coffee-image">
+
+      </div>
+      <div class="discount">
+          <div class="discount-details">
+            <p><H2>SPECIAL OFFERS</H2></p>
+        <p>
+          For Bags More Than 10 -
+          <b>20% Discount</b>
+        </p>
+        <p>
+          For Bags More Than 5 Upto 10 -
+          <b>10% Discount</b>
+        </p>
+        <p>Price Per Bag is $10</p>
+          </div>
+          <div class="discount-calculate">
+            <label for="coffee">Enter No of Bags</label>
+        <br />
+        <br />
+        <input type="text" id="coffee" />
+        <br />
+        <br />
+        <button onclick="Calculate()" class="discount-button">Calculate Discount</button>
+        <br />
+        <br />
+        <label for="Amount">Final Amount</label>
+        <br />
+        <br />
+        <input type="text" id="Amount" />
+          </div>
+      </div>
+      <div class="headertext">
+
+          <h1>
+            THANK YOU FOR PURCHASING!!
+            </h1>
+        </div>
+      
+    </div>
+  </body>
+  <script>
+    function Calculate() {
+      let cofkg = document.getElementById('coffee').value
+      var finamt
+      if (cofkg < 5) {
+        finamt = cofkg * 10
+      } else if (cofkg >= 5 && cofkg <= 10) {
+        finamt = cofkg * 10 - cofkg * 10 * 0.1
+      } else {
+        finamt = cofkg * 10 - cofkg * 10 * 0.2
+      }
+      document.getElementById('Amount').value = finamt
+    }
+  </script>
+</html>
